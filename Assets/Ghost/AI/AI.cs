@@ -9,7 +9,7 @@ public abstract class AI : MonoBehaviour
     public float actionTimeout = 10f;
 
     [Header("AI Properties")]
-    public float movementSpeed = 1f;
+    public float movementSpeed = 500f;
     public float wanderRadius = 5f;
     public float fleeMultiplier = 3f;
     public float fleeDistance = 15f;

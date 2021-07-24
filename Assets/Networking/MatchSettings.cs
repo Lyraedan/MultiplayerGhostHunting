@@ -17,7 +17,7 @@ public class MatchSettings : MonoBehaviour
 
     public Difficulty difficulty = Difficulty.Amature;
 
-    private PhotonView photonView;
+    public PhotonView photonView;
 
     public bool started = false;
 
@@ -25,8 +25,8 @@ public class MatchSettings : MonoBehaviour
     {
         if (!PhotonNetwork.IsConnectedAndReady || !PhotonNetwork.InRoom)
             return;
+
         Debug.Log("Do start");
-        photonView = GetComponent<PhotonView>();
         photonView.RPC("RPC_Start", RpcTarget.AllBuffered);
     }
 

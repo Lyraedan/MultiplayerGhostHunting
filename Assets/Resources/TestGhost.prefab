@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 7411745838681756329}
   - component: {fileID: 8603652268222090910}
   - component: {fileID: 7816431333961662854}
-  - component: {fileID: 2733462658997013057}
   - component: {fileID: 8309104295129363800}
   - component: {fileID: 2494448306707088964}
   - component: {fileID: 5277374580351807851}
@@ -120,22 +119,6 @@ MonoBehaviour:
   huntThreshold: 50
   manifestSfx: {fileID: 8300000, guid: e1edb921dfff36243863e7d2c047b0b0, type: 3}
   visiblityTimer: 1
---- !u!54 &2733462658997013057
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4887605653347168608}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 112
-  m_CollisionDetection: 0
 --- !u!195 &8309104295129363800
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -172,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 8309104295129363800}
   actionTimeout: 10
-  movementSpeed: 1
+  movementSpeed: 500
   wanderRadius: 5
   fleeMultiplier: 3
   fleeDistance: 15

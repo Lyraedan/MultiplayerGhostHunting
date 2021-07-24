@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1706943449673350655
+--- !u!1 &6552812655121722527
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,57 +8,54 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1706943449673350145}
-  - component: {fileID: 1706943449673350654}
-  - component: {fileID: 930242149308146737}
+  - component: {fileID: 6552812655121722525}
+  - component: {fileID: 6552812655121722526}
+  - component: {fileID: 6552812655121722524}
   m_Layer: 0
-  m_Name: NetworkManager
+  m_Name: MatchSettings
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1706943449673350145
+--- !u!4 &6552812655121722525
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706943449673350655}
+  m_GameObject: {fileID: 6552812655121722527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.859482, y: -0.59688187, z: 4.3262844}
+  m_LocalPosition: {x: 3.1999052, y: -0.3928461, z: 5.092991}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1706943449673350654
+--- !u!114 &6552812655121722526
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706943449673350655}
+  m_GameObject: {fileID: 6552812655121722527}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99e4b7b2579c26841a972df2fb4cb7d2, type: 3}
+  m_Script: {fileID: 11500000, guid: c0eda040a20e46348b298b43b682c601, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  connectedPlayerPrefab: {fileID: 1450333669803938728, guid: 1cd0b1ba617b0d6469b3a7af9ece6ec9,
-    type: 3}
-  nonConnectedPlayerPrefab: {fileID: 98830917590150603, guid: 371ab89e85d99b14a83443e1fec7f160,
-    type: 3}
-  maxPlayers: 4
-  gameVersion: 1.0
-  currentPlayer: {fileID: 0}
-  currentRoomName: 
---- !u!114 &930242149308146737
+  ghosts:
+  - {fileID: 4887605653347168608, guid: a94b46633982b284b90cf93145b81c8b, type: 3}
+  difficulty: 1
+  photonView: {fileID: 6552812655121722524}
+  started: 0
+--- !u!114 &6552812655121722524
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706943449673350655}
+  m_GameObject: {fileID: 6552812655121722527}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
