@@ -36,6 +36,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public void ConnectToMasterServer()
     {
         PhotonNetwork.ConnectUsingSettings();
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.GameVersion = gameVersion;
     }
 
@@ -102,6 +103,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
         }
         RoomOptions options = new RoomOptions();
         options.MaxPlayers = maxPlayers;
+        options.PublishUserId = true;
         PhotonNetwork.JoinOrCreateRoom(currentRoomName, options, TypedLobby.Default);
     }
 
@@ -152,6 +154,14 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     public GameObject SpawnPlayer()
     {
         return PhotonNetwork.Instantiate(this.connectedPlayerPrefab.name, new Vector3(0f, 2f, 0f), Quaternion.identity, 0);
+    }
+
+    public void StartMatch(int buildIndex)
+    {
+        if(PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.LoadLevel(buildIndex);
+        }
     }
 
     public string GenerateRoomName
